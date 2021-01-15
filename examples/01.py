@@ -5,6 +5,8 @@
 2. 所有表都应该有dt_create dt_update is_deleted字段(我是这么认为的)
    不要实际删除数据，所有删除都通过is_deleted=True为代表，平时筛选时增加is_deleted=False
 3. 所有表都应该指定db_table，不要使用默认生成的表名？不丑？
+4. 所有字段都设置上verbose_name字段，
+   外键的时候需要显示的指定，其它字段都是第一个参数就是，不需要显示指定
 '''
 from django.db import models
 
