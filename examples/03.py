@@ -1,5 +1,5 @@
 '''
-第三节 搜索用户
+第三节 搜索用户、Q、F
 实际业务中，经常用到的就是查找功能
 前面介绍过的查找都是精确的等于，下面说一下范围查找或者模糊查找、以及关联查找
 '''
@@ -103,3 +103,9 @@ query = {
     'name__icontains': '星',
 }
 UserModel.objects.filter(**query).all()
+
+# 更新
+# 在字段基础上修改更新
+# 所有用户年龄加1岁
+from django.db.models import F
+UserModel.objects.update(age=F('age')+1)
