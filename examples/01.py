@@ -51,6 +51,9 @@ class DepartmentUserModel(models.Model):
     dt_update = models.DateTimeField('更新时间', auto_now=True)
     is_deleted = models.BooleanField('是否删除', default=False)
 
+    class Meta:
+        db_table = 'department_user'
+
 
 # 创建用户
 data = {
