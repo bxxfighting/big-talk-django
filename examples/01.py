@@ -1,5 +1,5 @@
 '''
-第一节 先创建model
+第一节 创建model
 一个用户model，一个部门model，一个关联model
 1. 这个关联model其实可以使用django的ManyToManyField，但是我想自己掌控关联表
 2. 所有表都应该有dt_create dt_update is_deleted字段(我是这么认为的)
