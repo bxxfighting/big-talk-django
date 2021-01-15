@@ -86,6 +86,15 @@ UserModel.objects.filter(Q(name__icontains='星')|Q(age__gt=10)).all()
 from django.db.models import Q
 UserModel.objects.filter(Q(name__icontains='星')|Q(age__gt=10)).exclude(name__icontains='卜').all()
 
+# 这里提到了exclude就要说一下
+# 我们排除年龄为10岁的
+UserModel.objects.exclude(age=10).all()
+# 我们排除年龄为10岁的 并且 名字中带"星"的
+UserModel.objects.exclude(age=10, name__icontains='星').all()
+# 我们排除年龄为10岁的 或者 名字中带"星"的
+UserModel.objects.exclude(age=10).exclude(name__icontains='星').all()
+# 当前了，也可以用Q语句
+
 
 # 关联查找
 # 假设有一个部门的id为1，现在要查找这个部门下关联的用户名称中带有"星"字的
