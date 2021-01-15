@@ -1,9 +1,10 @@
 '''
 第一节 先创建model
 一个用户model，一个部门model，一个关联model
-这个关联model其实可以使用django的ManyToManyField，但是我想自己掌控关联表
-并且所有表都应该有dt_create dt_update is_deleted字段(我是这么认为的)
-不要实际删除数据，所有删除都通过is_deleted=True为代表，平时筛选时增加is_deleted=False
+1. 这个关联model其实可以使用django的ManyToManyField，但是我想自己掌控关联表
+2. 所有表都应该有dt_create dt_update is_deleted字段(我是这么认为的)
+   不要实际删除数据，所有删除都通过is_deleted=True为代表，平时筛选时增加is_deleted=False
+3. 所有表都应该指定db_table，不要使用默认生成的表名？不丑？
 '''
 from django.db import models
 
