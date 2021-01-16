@@ -77,6 +77,7 @@ def create_user(name, age, department_id):
         'department_id': department_id,
     }
     DepartmentUserModel.objects.create(**data)
+
 # 或者
 def create_user(name, age, department_id):
     with transaction.atomic():
