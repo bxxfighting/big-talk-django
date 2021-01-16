@@ -5,3 +5,4 @@
 [第三节 搜索用户、Q、F](https://github.com/bxxfighting/big-talk-django/blob/master/examples/03.py)  
 [第四节 聚合](https://github.com/bxxfighting/big-talk-django/blob/master/examples/04.py)  
 [第五节 按日期聚合](https://github.com/bxxfighting/big-talk-django/blob/master/examples/05.py)  
+[第六节 事务](https://github.com/bxxfighting/big-talk-django/blob/master/examples/06.py)  
