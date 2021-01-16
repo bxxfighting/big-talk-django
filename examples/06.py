@@ -65,7 +65,7 @@ class DepartmentUserModel(models.Model):
 # 但是我们接到的需求是，要么两步都成功，要么就都不创建
 from django.db import transaction
 
-@transaction.atomic()
+@transaction.atomic
 def create_user(name, age, department_id):
     data = {
         'name': '星爷',
